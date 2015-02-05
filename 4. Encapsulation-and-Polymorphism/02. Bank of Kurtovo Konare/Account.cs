@@ -6,18 +6,29 @@ using System.Threading.Tasks;
 
 namespace _02.Bank_of_Kurtovo_Konare
 {
-    abstract class Account : IAccountable
+    abstract class Account
     {
-        public Account(Customer customer, decimal balance, double interestRate)
+        protected Account(decimal balance, CustomerType customer, double interestRate, DateTime openingDate)
         {
-            this.Customer = customer;
             this.Balance = balance;
+            this.Customer = customer;
             this.InterestRate = interestRate;
+            this.OpeningDate = openingDate;
         }
 
-        public Customer Customer { get; set; }
-        public decimal Balance { get; set; }
-        public double InterestRate { get; set; }
+        public CustomerType Customer { get; private set; }
+
+        public decimal Balance { get; protected set; }
+
+        public double InterestRate { get; private set; }
+
+        public DateTime OpeningDate { get; private set; }
+
+        public virtual decimal CalculateInterest(int months)
+        {
+            decimal futureBalance = this.Balance * (decimal)(1 + (this.InterestRate * months));
+            return futureBalance;
+        }
 
         public override string ToString()
         {

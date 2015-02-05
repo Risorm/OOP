@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Shapes", "01. Shapes\01
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Bank of Kurtovo Konare", "02. Bank of Kurtovo Konare\02. Bank of Kurtovo Konare.csproj", "{E4C83C04-455B-47AC-8276-066BD62099C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Game Engine", "03. Game Engine\03. Game Engine.csproj", "{77C86F52-B061-4BEB-A774-94CE642248EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. TheSlum", "03. TheSlum-Skeleton\03. TheSlum.csproj", "{7C6F7F25-2FDB-401F-B1A9-D8CE3BB7308D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{E4C83C04-455B-47AC-8276-066BD62099C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4C83C04-455B-47AC-8276-066BD62099C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4C83C04-455B-47AC-8276-066BD62099C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77C86F52-B061-4BEB-A774-94CE642248EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77C86F52-B061-4BEB-A774-94CE642248EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77C86F52-B061-4BEB-A774-94CE642248EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77C86F52-B061-4BEB-A774-94CE642248EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6F7F25-2FDB-401F-B1A9-D8CE3BB7308D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6F7F25-2FDB-401F-B1A9-D8CE3BB7308D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6F7F25-2FDB-401F-B1A9-D8CE3BB7308D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6F7F25-2FDB-401F-B1A9-D8CE3BB7308D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
