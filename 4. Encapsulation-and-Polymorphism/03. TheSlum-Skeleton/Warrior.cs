@@ -19,17 +19,35 @@ namespace TheSlum
 
         public override Character GetTarget(IEnumerable<Character> targetsList)
         {
-            throw new NotImplementedException();
+            return targetsList.LastOrDefault(c => c.IsAlive && c.Team != this.Team);
         }
 
         public override void AddToInventory(Item item)
         {
-            throw new NotImplementedException();
+            this.Inventory.Add(item);
+            ApplyItemEffects(item);
         }
 
         public override void RemoveFromInventory(Item item)
         {
-            throw new NotImplementedException();
+            this.Inventory.Remove(item);
+            RemoveItemEffects(item);
+        }
+        protected override void ApplyItemEffects(Item item)
+        {
+            base.ApplyItemEffects(item);
+            this.AttackPoints += item.AttackEffect;
+        }
+
+        protected override void RemoveItemEffects(Item item)
+        {
+            base.RemoveItemEffects(item);
+            this.AttackPoints -= item.AttackEffect;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + string.Format(", Attack: {0}", this.AttackPoints);
         }
     }
 }
