@@ -1,24 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _02.Fraction_Calculator
 {
     struct Fraction
     {
-        private int denominator;
+        private decimal denominator;
 
-        public Fraction(int denominator, int numerator) : this()
+        public Fraction(int numerator, int denominator)
+            : this()
         {
-            this.Denominator = denominator;
-            Numerator = numerator;
+            this.Denominator = (decimal)denominator;
+            Numerator = (decimal)numerator;
         }
 
-        public int Numerator { get; set; }
+        public decimal Numerator { get; set; }
 
-        public int Denominator
+        public decimal Denominator
         {
             get { return this.denominator; }
             set
@@ -31,11 +28,26 @@ namespace _02.Fraction_Calculator
             }
         }
 
+        public static Fraction operator -(Fraction a, Fraction b)
+        {
+
+            Fraction fraction = new Fraction();
+            fraction.Numerator = a.Numerator * b.Denominator - b.Numerator * a.Denominator;
+            fraction.Denominator = a.Denominator * b.Denominator;
+            return fraction;
+        }
         public static Fraction operator +(Fraction a, Fraction b)
         {
 
             Fraction fraction = new Fraction();
-            fraction.denominator = 
+            fraction.Numerator = a.Numerator * b.Denominator + b.Numerator * a.Denominator;
+            fraction.Denominator = a.Denominator * b.Denominator;
+            return fraction;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0}", this.Numerator/this.Denominator);
         }
     }
 }
