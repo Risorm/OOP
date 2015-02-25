@@ -22,7 +22,7 @@ namespace _01.Customer
             Console.WriteLine(peshoCustomerNew);
             Console.WriteLine(goshoCustomer);
 
-            var clonedPesho = peshoCustomer.Clone();
+            Customer clonedPesho = (Customer)peshoCustomer.Clone();
             Console.WriteLine(clonedPesho);
             peshoCustomer.PaymentsList.Add(mixer);
             Console.WriteLine("changed");
